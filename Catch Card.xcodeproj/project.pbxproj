@@ -1,0 +1,505 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 55;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		4393E5F95B22BF205BBA0D90 /* Pods_Catch_Card.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 829C5F7134F0284FFC3491CA /* Pods_Catch_Card.framework */; };
+		B4079D0A2815A0C8008F2387 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4079D092815A0C8008F2387 /* AppDelegate.swift */; };
+		B4079D0C2815A0C8008F2387 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4079D0B2815A0C8008F2387 /* SceneDelegate.swift */; };
+		B4079D0E2815A0C8008F2387 /* CameraViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4079D0D2815A0C8008F2387 /* CameraViewController.swift */; };
+		B4079D132815A0CD008F2387 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B4079D122815A0CD008F2387 /* Assets.xcassets */; };
+		B4079D162815A0CD008F2387 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B4079D142815A0CD008F2387 /* LaunchScreen.storyboard */; };
+		B4106F7A28263BCE0041BD9C /* CameraErrors.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4106F7928263BCE0041BD9C /* CameraErrors.swift */; };
+		B4704813281BBA2C00C67A9B /* CameraViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4704812281BBA2C00C67A9B /* CameraViewModel.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		5B557C09D829F8871213474C /* Pods-Catch Card.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Catch Card.release.xcconfig"; path = "Target Support Files/Pods-Catch Card/Pods-Catch Card.release.xcconfig"; sourceTree = "<group>"; };
+		829C5F7134F0284FFC3491CA /* Pods_Catch_Card.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Catch_Card.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		B4079D062815A0C8008F2387 /* Catch Card.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Catch Card.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		B4079D092815A0C8008F2387 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		B4079D0B2815A0C8008F2387 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
+		B4079D0D2815A0C8008F2387 /* CameraViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CameraViewController.swift; sourceTree = "<group>"; };
+		B4079D122815A0CD008F2387 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		B4079D152815A0CD008F2387 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		B4079D172815A0CD008F2387 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		B4106F7928263BCE0041BD9C /* CameraErrors.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CameraErrors.swift; sourceTree = "<group>"; };
+		B4704812281BBA2C00C67A9B /* CameraViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CameraViewModel.swift; sourceTree = "<group>"; };
+		DDCB329D3C6ED68987BC2F14 /* Pods-Catch Card.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Catch Card.debug.xcconfig"; path = "Target Support Files/Pods-Catch Card/Pods-Catch Card.debug.xcconfig"; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		B4079D032815A0C8008F2387 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				4393E5F95B22BF205BBA0D90 /* Pods_Catch_Card.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		76D3C241A70F4F8DA391EEB6 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				DDCB329D3C6ED68987BC2F14 /* Pods-Catch Card.debug.xcconfig */,
+				5B557C09D829F8871213474C /* Pods-Catch Card.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
+		B4079CFD2815A0C8008F2387 = {
+			isa = PBXGroup;
+			children = (
+				B4079D082815A0C8008F2387 /* Catch Card */,
+				B4079D072815A0C8008F2387 /* Products */,
+				76D3C241A70F4F8DA391EEB6 /* Pods */,
+				CF5176D665F96222FB7DCC38 /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		B4079D072815A0C8008F2387 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				B4079D062815A0C8008F2387 /* Catch Card.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		B4079D082815A0C8008F2387 /* Catch Card */ = {
+			isa = PBXGroup;
+			children = (
+				B4106F7728263B800041BD9C /* Core */,
+				B4079D212815AF69008F2387 /* Resources */,
+				B4079D202815AF1A008F2387 /* Startup */,
+				B4079D1F2815AF0B008F2387 /* Models */,
+				B4079D1E2815AF03008F2387 /* ViewModels */,
+				B4079D1D2815AEFC008F2387 /* Views */,
+				B4079D172815A0CD008F2387 /* Info.plist */,
+			);
+			path = "Catch Card";
+			sourceTree = "<group>";
+		};
+		B4079D1D2815AEFC008F2387 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				B4079D0D2815A0C8008F2387 /* CameraViewController.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		B4079D1E2815AF03008F2387 /* ViewModels */ = {
+			isa = PBXGroup;
+			children = (
+				B4704812281BBA2C00C67A9B /* CameraViewModel.swift */,
+			);
+			path = ViewModels;
+			sourceTree = "<group>";
+		};
+		B4079D1F2815AF0B008F2387 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		B4079D202815AF1A008F2387 /* Startup */ = {
+			isa = PBXGroup;
+			children = (
+				B4079D092815A0C8008F2387 /* AppDelegate.swift */,
+				B4079D0B2815A0C8008F2387 /* SceneDelegate.swift */,
+				B4079D142815A0CD008F2387 /* LaunchScreen.storyboard */,
+			);
+			path = Startup;
+			sourceTree = "<group>";
+		};
+		B4079D212815AF69008F2387 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				B4079D122815A0CD008F2387 /* Assets.xcassets */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		B4106F7728263B800041BD9C /* Core */ = {
+			isa = PBXGroup;
+			children = (
+				B4106F7828263BA10041BD9C /* Errors */,
+			);
+			path = Core;
+			sourceTree = "<group>";
+		};
+		B4106F7828263BA10041BD9C /* Errors */ = {
+			isa = PBXGroup;
+			children = (
+				B4106F7928263BCE0041BD9C /* CameraErrors.swift */,
+			);
+			path = Errors;
+			sourceTree = "<group>";
+		};
+		CF5176D665F96222FB7DCC38 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				829C5F7134F0284FFC3491CA /* Pods_Catch_Card.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		B4079D052815A0C8008F2387 /* Catch Card */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = B4079D1A2815A0CD008F2387 /* Build configuration list for PBXNativeTarget "Catch Card" */;
+			buildPhases = (
+				9ECE6C9DA630F39EA68912CF /* [CP] Check Pods Manifest.lock */,
+				B4079D022815A0C8008F2387 /* Sources */,
+				B4079D032815A0C8008F2387 /* Frameworks */,
+				B4079D042815A0C8008F2387 /* Resources */,
+				8F707116F25435C3149BF15C /* [CP] Embed Pods Frameworks */,
+				BCEA6ABD702BA5205C4BFA1D /* [CP] Copy Pods Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "Catch Card";
+			productName = "Catch Card";
+			productReference = B4079D062815A0C8008F2387 /* Catch Card.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		B4079CFE2815A0C8008F2387 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = 1;
+				LastSwiftUpdateCheck = 1330;
+				LastUpgradeCheck = 1330;
+				TargetAttributes = {
+					B4079D052815A0C8008F2387 = {
+						CreatedOnToolsVersion = 13.3.1;
+					};
+				};
+			};
+			buildConfigurationList = B4079D012815A0C8008F2387 /* Build configuration list for PBXProject "Catch Card" */;
+			compatibilityVersion = "Xcode 13.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = B4079CFD2815A0C8008F2387;
+			productRefGroup = B4079D072815A0C8008F2387 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				B4079D052815A0C8008F2387 /* Catch Card */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		B4079D042815A0C8008F2387 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B4079D162815A0CD008F2387 /* LaunchScreen.storyboard in Resources */,
+				B4079D132815A0CD008F2387 /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		8F707116F25435C3149BF15C /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Catch Card/Pods-Catch Card-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Catch Card/Pods-Catch Card-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-Catch Card/Pods-Catch Card-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		9ECE6C9DA630F39EA68912CF /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-Catch Card-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		BCEA6ABD702BA5205C4BFA1D /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Catch Card/Pods-Catch Card-resources-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Copy Pods Resources";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Catch Card/Pods-Catch Card-resources-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-Catch Card/Pods-Catch Card-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		B4079D022815A0C8008F2387 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B4079D0E2815A0C8008F2387 /* CameraViewController.swift in Sources */,
+				B4704813281BBA2C00C67A9B /* CameraViewModel.swift in Sources */,
+				B4079D0A2815A0C8008F2387 /* AppDelegate.swift in Sources */,
+				B4079D0C2815A0C8008F2387 /* SceneDelegate.swift in Sources */,
+				B4106F7A28263BCE0041BD9C /* CameraErrors.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		B4079D142815A0CD008F2387 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				B4079D152815A0CD008F2387 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		B4079D182815A0CD008F2387 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++17";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		B4079D192815A0CD008F2387 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++17";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		B4079D1B2815A0CD008F2387 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = DDCB329D3C6ED68987BC2F14 /* Pods-Catch Card.debug.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 32X3U36SB6;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = "Catch Card/Info.plist";
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "me.haniman.Catch-Card";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 1;
+			};
+			name = Debug;
+		};
+		B4079D1C2815A0CD008F2387 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 5B557C09D829F8871213474C /* Pods-Catch Card.release.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 32X3U36SB6;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = "Catch Card/Info.plist";
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "me.haniman.Catch-Card";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 1;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		B4079D012815A0C8008F2387 /* Build configuration list for PBXProject "Catch Card" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				B4079D182815A0CD008F2387 /* Debug */,
+				B4079D192815A0CD008F2387 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		B4079D1A2815A0CD008F2387 /* Build configuration list for PBXNativeTarget "Catch Card" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				B4079D1B2815A0CD008F2387 /* Debug */,
+				B4079D1C2815A0CD008F2387 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = B4079CFE2815A0C8008F2387 /* Project object */;
+}
