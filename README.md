@@ -1,5 +1,5 @@
 # Catch Card - Carrier topup card scanner
-Catch card is carrier topup card Scanner app buit in Swift UIkit and also used Google ML Kit. *Developed by [Ananthamoorthy Haniman](https://github.com/ananthhaniman)*
+Catch card is carrier topup card Scanner app built in Swift UIKit and also used Google ML Kit. *Developed by [Ananthamoorthy Haniman](https://github.com/ananthhaniman)*
 
 This App experiment with
 - MVVM
