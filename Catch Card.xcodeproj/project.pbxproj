@@ -14,6 +14,8 @@
 		B4079D132815A0CD008F2387 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B4079D122815A0CD008F2387 /* Assets.xcassets */; };
 		B4079D162815A0CD008F2387 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B4079D142815A0CD008F2387 /* LaunchScreen.storyboard */; };
 		B4106F7A28263BCE0041BD9C /* CameraErrors.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4106F7928263BCE0041BD9C /* CameraErrors.swift */; };
+		B464AEA528277C38002EA175 /* CarrierProviderViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B464AEA428277C38002EA175 /* CarrierProviderViewModel.swift */; };
+		B464AEA828278348002EA175 /* Resize+UIImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = B464AEA728278348002EA175 /* Resize+UIImage.swift */; };
 		B4704813281BBA2C00C67A9B /* CameraViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4704812281BBA2C00C67A9B /* CameraViewModel.swift */; };
 /* End PBXBuildFile section */
 
@@ -28,6 +30,8 @@
 		B4079D152815A0CD008F2387 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		B4079D172815A0CD008F2387 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		B4106F7928263BCE0041BD9C /* CameraErrors.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CameraErrors.swift; sourceTree = "<group>"; };
+		B464AEA428277C38002EA175 /* CarrierProviderViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CarrierProviderViewModel.swift; sourceTree = "<group>"; };
+		B464AEA728278348002EA175 /* Resize+UIImage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Resize+UIImage.swift"; sourceTree = "<group>"; };
 		B4704812281BBA2C00C67A9B /* CameraViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CameraViewModel.swift; sourceTree = "<group>"; };
 		DDCB329D3C6ED68987BC2F14 /* Pods-Catch Card.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Catch Card.debug.xcconfig"; path = "Target Support Files/Pods-Catch Card/Pods-Catch Card.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -97,6 +101,7 @@
 			isa = PBXGroup;
 			children = (
 				B4704812281BBA2C00C67A9B /* CameraViewModel.swift */,
+				B464AEA428277C38002EA175 /* CarrierProviderViewModel.swift */,
 			);
 			path = ViewModels;
 			sourceTree = "<group>";
@@ -129,6 +134,7 @@
 		B4106F7728263B800041BD9C /* Core */ = {
 			isa = PBXGroup;
 			children = (
+				B464AEA628278327002EA175 /* Extensions */,
 				B4106F7828263BA10041BD9C /* Errors */,
 			);
 			path = Core;
@@ -140,6 +146,14 @@
 				B4106F7928263BCE0041BD9C /* CameraErrors.swift */,
 			);
 			path = Errors;
+			sourceTree = "<group>";
+		};
+		B464AEA628278327002EA175 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				B464AEA728278348002EA175 /* Resize+UIImage.swift */,
+			);
+			path = Extensions;
 			sourceTree = "<group>";
 		};
 		CF5176D665F96222FB7DCC38 /* Frameworks */ = {
@@ -283,9 +297,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				B4079D0E2815A0C8008F2387 /* CameraViewController.swift in Sources */,
+				B464AEA828278348002EA175 /* Resize+UIImage.swift in Sources */,
 				B4704813281BBA2C00C67A9B /* CameraViewModel.swift in Sources */,
 				B4079D0A2815A0C8008F2387 /* AppDelegate.swift in Sources */,
 				B4079D0C2815A0C8008F2387 /* SceneDelegate.swift in Sources */,
+				B464AEA528277C38002EA175 /* CarrierProviderViewModel.swift in Sources */,
 				B4106F7A28263BCE0041BD9C /* CameraErrors.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

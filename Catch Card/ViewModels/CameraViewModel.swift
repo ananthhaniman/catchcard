@@ -37,7 +37,7 @@ class CameraViewModel{
         self.device = captureDevice
         AVCaptureDevice.requestAccess(for: .video) { granted in
             if !granted {
-                self.error.onNext(CameraErrors.premissionError(message: "Camera Premisson not given"))
+                self.error.onNext(CameraErrors.premissionError(message: "In order to continue, you must allow access to your camera.\n\nYou can grant it in app settings."))
             }
         }
         
@@ -63,7 +63,7 @@ class CameraViewModel{
             do {
                 _ = try device?.lockForConfiguration()
             } catch {
-                self.error.onNext(CameraErrors.torchError(message: "Unable to access camera property "))
+                self.error.onNext(CameraErrors.torchError(message: "Sorry,Unable to access camera property "))
             }
             hasFlashLight.onNext(true)
             let torchStatus = device?.isTorchActive
