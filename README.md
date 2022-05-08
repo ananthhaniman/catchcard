@@ -1,5 +1,10 @@
 # Catch Card - Carrier topup card scanner
-Catch card is carrier topup card Scanner app buit in Swift & Storyboard and also used Google ML Kit. *Developed by [Ananthamoorthy Haniman](https://github.com/ananthhaniman)*
+Catch card is carrier topup card Scanner app buit in Swift UI-kit and also used Google ML Kit. *Developed by [Ananthamoorthy Haniman](https://github.com/ananthhaniman)*
+
+This App experiment with
+- MVVM
+- RxSwift
+- AVFoundation
 
 The simplest & Quick way to topup your Carrier account when you have a topup card in your hand. It can scan any Sri lankan Carrier Providers Topups cards(Dialog, Mobitel, Etisalat, Hutch and Airtel). so you don’t have to type the PIN number manually.
 
