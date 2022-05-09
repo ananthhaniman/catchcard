@@ -10,12 +10,13 @@ import RxSwift
 import RxCocoa
 import CoreTelephony
 
-struct CarrierProviderViewModel{
+class CarrierProviderViewModel{
     
     private var networkInfo:CTTelephonyNetworkInfo?
+    private var carriers:[CTCarrier] = []
+    private var selectedCarrierIndex = 0
     
-    public let carriers:PublishSubject<[CTCarrier]> = PublishSubject()
-    public let selectedCarrier:PublishSubject<CTCarrier> = PublishSubject()
+    public let selectedCarrier:PublishSubject<CarrierModel> = PublishSubject()
     
     init(telephonyNetworkInfo:CTTelephonyNetworkInfo) {
         self.networkInfo = telephonyNetworkInfo
@@ -29,9 +30,28 @@ struct CarrierProviderViewModel{
                 let (_, value) = arg0
                 carrierList.append(value)
             }
+            
+            if let firstCarrier = carrier.first {
+                selectedCarrier.onNext(CarrierModel(selectedCarrierModel: firstCarrier.value, isDualCarrier: carrier.count > 1))
+                selectedCarrierIndex = 0
+            }
+            carriers = carrierList
         }
         
-        carriers.onNext(carrierList)
+    }
+    
+    
+    func switchCarrier() {
+        if !carriers.isEmpty && carriers.count > 1 {
+            if selectedCarrierIndex == 0 {
+                selectedCarrier.onNext(CarrierModel(selectedCarrierModel: carriers[1], isDualCarrier: carriers.count > 1))
+                selectedCarrierIndex = 1
+            }else{
+                selectedCarrier.onNext(CarrierModel(selectedCarrierModel: carriers[0], isDualCarrier: carriers.count > 1))
+                selectedCarrierIndex = 0
+            }
+            
+        }
     }
     
 }

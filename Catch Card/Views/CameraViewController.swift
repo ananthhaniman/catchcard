@@ -10,6 +10,7 @@ import AVFoundation
 import RxSwift
 import RxCocoa
 import CoreTelephony
+import MLKit
 
 class CameraViewController: UIViewController {
     
@@ -49,6 +50,10 @@ class CameraViewController: UIViewController {
         telephonyNetworkInfo: CTTelephonyNetworkInfo()
     )
     
+    private let textRecognizerViewModel:TextRecognizerViewModel = TextRecognizerViewModel(
+        textRecognizer: TextRecognizer()
+    )
+    
     private var flashLightBtn:UIButton = {
         let flashBtn = UIButton()
         flashBtn.setImage(UIImage(named: "FlashIconOff"), for: .normal)
@@ -57,7 +62,6 @@ class CameraViewController: UIViewController {
         flashBtn.backgroundColor = .black
         flashBtn.alpha = 0
         flashBtn.translatesAutoresizingMaskIntoConstraints = false
-        
         return flashBtn
     }()
     
@@ -70,13 +74,22 @@ class CameraViewController: UIViewController {
         simSwitchBtn.setImage(UIImage(named: "SwitchSim")?.resizedImage(Size: CGSize(width: 20, height: 20)), for: .normal)
         simSwitchBtn.titleLabel?.font = UIFont.systemFont(ofSize: 14, weight: .bold)
         simSwitchBtn.alpha = 0
-        
-        
         return simSwitchBtn
     }()
     
-    private let disposeBag = DisposeBag()
+    private var singleCarrierBtn:UIButton = {
+        let singleCarrierBtn = UIButton()
+        singleCarrierBtn.layer.cornerRadius = 20
+        singleCarrierBtn.backgroundColor = .systemBlue
+        singleCarrierBtn.translatesAutoresizingMaskIntoConstraints = false
+        singleCarrierBtn.setImage(UIImage(named: "Sim")?.resizedImage(Size: CGSize(width: 20, height: 20)), for: .disabled)
+        singleCarrierBtn.titleLabel?.font = UIFont.systemFont(ofSize: 14, weight: .bold)
+        singleCarrierBtn.alpha = 0
+        singleCarrierBtn.isEnabled = false
+        return singleCarrierBtn
+    }()
     
+    private let disposeBag = DisposeBag()
     private var errorMessage:CameraErrors?
     
     
@@ -148,23 +161,37 @@ class CameraViewController: UIViewController {
             .disposed(by: disposeBag)
         
         carrierProviderViewModel
-            .carriers
+            .selectedCarrier
             .observe(on: MainScheduler.instance)
-            .subscribe(onNext:{ carriers in
-                print(carriers)
-                if !carriers.isEmpty {
+            .subscribe(onNext:{ carrier in
+                if carrier.isDualCarrier {
                     self.simSwitchBtn.alpha = 1
-                    
-                    if carriers.count > 1 {
-                        self.simSwitchBtn.setTitle("   \(String(describing: carriers[0].carrierName!))", for: .normal)
-                        self.simSwitchBtn.setTitle("   \(String(describing: carriers[1].carrierName!))", for: .selected)
-                    }
-                    
+                    self.singleCarrierBtn.alpha = 0
+                    self.simSwitchBtn.setTitle("   \(String(describing: carrier.selectedCarrierModel.carrierName!))", for: .normal)
+                }else{
+                    self.simSwitchBtn.alpha = 0
+                    self.singleCarrierBtn.alpha = 1
+                    self.singleCarrierBtn.setTitle("   \(String(describing: carrier.selectedCarrierModel.carrierName!))", for: .normal)
                 }
                 
-                
+
             }).disposed(by: disposeBag)
         
+        self.simSwitchBtn.rx.tap.subscribe(onNext:{
+            self.carrierProviderViewModel.switchCarrier()
+        }).disposed(by: disposeBag)
+        
+        textRecognizerViewModel
+            .activeState
+            .observe(on: MainScheduler.instance)
+            .subscribe(onNext:{ status in
+
+                if status {
+                    self.textRecognizerViewModel.listen(pattern: "[0-9]{4} [0-9]{4} [0-9]{4}", visionImage: VisionImage(buffer: CMSampleBuffer), carrier: "dlkngfg")
+                }
+                
+            }).disposed(by: disposeBag)
+
         
     }
     
@@ -182,6 +209,7 @@ class CameraViewController: UIViewController {
         view.addSubview(flashLightBtn)
         view.addSubview(messageLabel)
         view.addSubview(simSwitchBtn)
+        view.addSubview(singleCarrierBtn)
         
         applyConstraints()
     }
@@ -211,14 +239,25 @@ class CameraViewController: UIViewController {
         let simSwicthBtnConstrains = [
             simSwitchBtn.bottomAnchor.constraint(equalTo: view.safeAreaLayoutGuide.bottomAnchor, constant: -40),
             simSwitchBtn.trailingAnchor.constraint(equalTo: view.trailingAnchor, constant: -20),
-            simSwitchBtn.widthAnchor.constraint(equalToConstant: 105),
+            simSwitchBtn.widthAnchor.constraint(equalToConstant: 110),
             simSwitchBtn.heightAnchor.constraint(equalToConstant: 39)
         ]
+        
+        
+        let singleCarrierInfoStackConstrains = [
+            singleCarrierBtn.bottomAnchor.constraint(equalTo: view.safeAreaLayoutGuide.bottomAnchor, constant: -40),
+            singleCarrierBtn.trailingAnchor.constraint(equalTo: view.trailingAnchor, constant: -20),
+            singleCarrierBtn.widthAnchor.constraint(equalToConstant: 110),
+            singleCarrierBtn.heightAnchor.constraint(equalToConstant: 39)
+        ]
+        
+        
         
         NSLayoutConstraint.activate(logoImageViewConstrains)
         NSLayoutConstraint.activate(flashLightBtnConstrains)
         NSLayoutConstraint.activate(messageLabelConstrains)
         NSLayoutConstraint.activate(simSwicthBtnConstrains)
+        NSLayoutConstraint.activate(singleCarrierInfoStackConstrains)
         
         
     }

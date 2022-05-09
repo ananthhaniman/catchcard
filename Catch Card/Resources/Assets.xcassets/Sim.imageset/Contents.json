@@ -1,17 +1,17 @@
 {
   "images" : [
     {
-      "filename" : "dual-sim.png",
+      "filename" : "sim-card (2).png",
       "idiom" : "universal",
       "scale" : "1x"
     },
     {
-      "filename" : "dual-sim (1).png",
+      "filename" : "sim-card (1).png",
       "idiom" : "universal",
       "scale" : "2x"
     },
     {
-      "filename" : "dual-sim (2).png",
+      "filename" : "sim-card.png",
       "idiom" : "universal",
       "scale" : "3x"
     }

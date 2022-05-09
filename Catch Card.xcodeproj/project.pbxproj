@@ -14,6 +14,9 @@
 		B4079D132815A0CD008F2387 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B4079D122815A0CD008F2387 /* Assets.xcassets */; };
 		B4079D162815A0CD008F2387 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B4079D142815A0CD008F2387 /* LaunchScreen.storyboard */; };
 		B4106F7A28263BCE0041BD9C /* CameraErrors.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4106F7928263BCE0041BD9C /* CameraErrors.swift */; };
+		B4517B7D28296257003E7A47 /* CarrierModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4517B7C28296257003E7A47 /* CarrierModel.swift */; };
+		B4517B7F282971EA003E7A47 /* TextRecognizerViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4517B7E282971EA003E7A47 /* TextRecognizerViewModel.swift */; };
+		B4517B8128297C1F003E7A47 /* ResultModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4517B8028297C1F003E7A47 /* ResultModel.swift */; };
 		B464AEA528277C38002EA175 /* CarrierProviderViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B464AEA428277C38002EA175 /* CarrierProviderViewModel.swift */; };
 		B464AEA828278348002EA175 /* Resize+UIImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = B464AEA728278348002EA175 /* Resize+UIImage.swift */; };
 		B4704813281BBA2C00C67A9B /* CameraViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4704812281BBA2C00C67A9B /* CameraViewModel.swift */; };
@@ -30,6 +33,9 @@
 		B4079D152815A0CD008F2387 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		B4079D172815A0CD008F2387 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		B4106F7928263BCE0041BD9C /* CameraErrors.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CameraErrors.swift; sourceTree = "<group>"; };
+		B4517B7C28296257003E7A47 /* CarrierModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CarrierModel.swift; sourceTree = "<group>"; };
+		B4517B7E282971EA003E7A47 /* TextRecognizerViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextRecognizerViewModel.swift; sourceTree = "<group>"; };
+		B4517B8028297C1F003E7A47 /* ResultModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResultModel.swift; sourceTree = "<group>"; };
 		B464AEA428277C38002EA175 /* CarrierProviderViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CarrierProviderViewModel.swift; sourceTree = "<group>"; };
 		B464AEA728278348002EA175 /* Resize+UIImage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Resize+UIImage.swift"; sourceTree = "<group>"; };
 		B4704812281BBA2C00C67A9B /* CameraViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CameraViewModel.swift; sourceTree = "<group>"; };
@@ -102,6 +108,7 @@
 			children = (
 				B4704812281BBA2C00C67A9B /* CameraViewModel.swift */,
 				B464AEA428277C38002EA175 /* CarrierProviderViewModel.swift */,
+				B4517B7E282971EA003E7A47 /* TextRecognizerViewModel.swift */,
 			);
 			path = ViewModels;
 			sourceTree = "<group>";
@@ -109,6 +116,8 @@
 		B4079D1F2815AF0B008F2387 /* Models */ = {
 			isa = PBXGroup;
 			children = (
+				B4517B7C28296257003E7A47 /* CarrierModel.swift */,
+				B4517B8028297C1F003E7A47 /* ResultModel.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -302,7 +311,10 @@
 				B4079D0A2815A0C8008F2387 /* AppDelegate.swift in Sources */,
 				B4079D0C2815A0C8008F2387 /* SceneDelegate.swift in Sources */,
 				B464AEA528277C38002EA175 /* CarrierProviderViewModel.swift in Sources */,
+				B4517B7D28296257003E7A47 /* CarrierModel.swift in Sources */,
 				B4106F7A28263BCE0041BD9C /* CameraErrors.swift in Sources */,
+				B4517B8128297C1F003E7A47 /* ResultModel.swift in Sources */,
+				B4517B7F282971EA003E7A47 /* TextRecognizerViewModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
