@@ -62,7 +62,7 @@ class TextRecognizerViewModel {
             deviceOrientation: UIDevice.current.orientation,
             cameraPosition: .back)
         
-        textRecognizer?.process(self.visionImage!) { result, error in
+        self.textRecognizer?.process(self.visionImage!) { result, error in
             guard error == nil, let result = result else {
                 // Error handling
                 return

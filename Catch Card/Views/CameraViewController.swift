@@ -51,7 +51,7 @@ class CameraViewController: UIViewController {
     )
     
     private let textRecognizerViewModel:TextRecognizerViewModel = TextRecognizerViewModel(
-        textRecognizer: TextRecognizer()
+        textRecognizer: TextRecognizer.textRecognizer(options: TextRecognizerOptions())
     )
     
     private var flashLightBtn:UIButton = {
