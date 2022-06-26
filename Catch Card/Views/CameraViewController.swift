@@ -99,14 +99,18 @@ class CameraViewController: UIViewController {
         setupUI()
         setupBindings()
         if let cameraDevice = AVCaptureDevice.default(.builtInWideAngleCamera,for: .video, position: .back) {
+            self.cameraViewModel.delegate = self
             cameraViewModel.requestCamera(captureDevice: cameraDevice)
         }else{
             self.messageLabel.text = "We can't find your device camera. In order to continue, camera access required"
         }
         
+        
     }
     
     private func setupBindings(){
+        
+        
         cameraViewModel
             .cameraSession
             .observe(on: MainScheduler.instance)
@@ -177,20 +181,9 @@ class CameraViewController: UIViewController {
 
             }).disposed(by: disposeBag)
         
-        self.simSwitchBtn.rx.tap.subscribe(onNext:{
-            self.carrierProviderViewModel.switchCarrier()
-        }).disposed(by: disposeBag)
-        
-        textRecognizerViewModel
-            .activeState
-            .observe(on: MainScheduler.instance)
-            .subscribe(onNext:{ status in
-
-                if status {
-                    self.textRecognizerViewModel.listen(pattern: "[0-9]{4} [0-9]{4} [0-9]{4}", visionImage: VisionImage(buffer: CMSampleBuffer), carrier: "dlkngfg")
-                }
-                
-            }).disposed(by: disposeBag)
+//        self.simSwitchBtn.rx.tap.subscribe(onNext:{
+//            self.carrierProviderViewModel.switchCarrier()
+//        }).disposed(by: disposeBag)
 
         
     }
@@ -260,6 +253,16 @@ class CameraViewController: UIViewController {
         NSLayoutConstraint.activate(singleCarrierInfoStackConstrains)
         
         
+    }
+    
+}
+
+
+extension CameraViewController:AVCaptureVideoDataOutputSampleBufferDelegate{
+    
+    func captureOutput(_ output: AVCaptureOutput, didOutput sampleBuffer: CMSampleBuffer, from connection: AVCaptureConnection) {
+        print("hellop")
+        self.textRecognizerViewModel.listen(pattern: "[0-9]{4} [0-9]{4} [0-9]{4}", buffer: sampleBuffer,carrier: "Dialog")
     }
     
     

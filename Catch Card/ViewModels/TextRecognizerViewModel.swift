@@ -17,7 +17,7 @@ class TextRecognizerViewModel {
     private var visionImage:VisionImage?
     private var textRecognizer:TextRecognizer?
     
-    public let result:BehaviorRelay<ResultModel> = BehaviorRelay(value:ResultModel(number: nil, carrier: nil, ussdStart: nil, ussdEnd: nil))
+    public let result:PublishSubject<ResultModel> = PublishSubject()
     
     init(textRecognizer:TextRecognizer) {
         self.textRecognizer = textRecognizer
@@ -52,8 +52,9 @@ class TextRecognizerViewModel {
         self.activeState.onNext(true)
     }
     
-    func listen(pattern:String,visionImage:VisionImage,carrier: String) {
-        self.visionImage = visionImage
+    func listen(pattern:String,buffer:CMSampleBuffer,carrier: String) {
+        print("found")
+        self.visionImage = VisionImage(buffer: buffer)
         if self.visionImage == nil {
             return
         }
@@ -66,24 +67,20 @@ class TextRecognizerViewModel {
                 // Error handling
                 return
             }
+            
             for block in result.blocks {
                 for line in block.lines {
                     let lineText = line.text
                     if(self.isMatchPattern(for: lineText, with: pattern)){
-                        self.result.accept(ResultModel(number: lineText, carrier: carrier, ussdStart: "#123*", ussdEnd: "#", isFound: true))
+                        print(lineText)
+//                        self.result.onNext(ResultModel(number: lineText, carrier: carrier, ussdStart: "#123*", ussdEnd: "#", isFound: true))
                     }
                 }
             }
         }
     }
     
-    func stopListen() {
-        self.activeState.onNext(false)
-    }
     
-    func reset() {
-        self.result.accept(ResultModel(number: nil, carrier: nil, ussdStart: nil, ussdEnd: nil, isFound: false))
-    }
     
     
     

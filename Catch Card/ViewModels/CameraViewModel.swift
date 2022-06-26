@@ -22,6 +22,8 @@ class CameraViewModel{
     public let flashLightStatus: PublishSubject<Bool> = PublishSubject()
     public let hasFlashLight: PublishSubject<Bool> = PublishSubject()
     
+    public var delegate:AVCaptureVideoDataOutputSampleBufferDelegate?
+    
     
     init(captureSession: AVCaptureSession,
          dataOutput:AVCaptureVideoDataOutput
@@ -51,6 +53,8 @@ class CameraViewModel{
         output?.videoSettings = [String(kCVPixelBufferPixelFormatTypeKey):
                                     NSNumber(value: kCVPixelFormatType_32BGRA)]
         output?.connection(with: AVMediaType.video)?.videoOrientation = .portrait
+        let queue = DispatchQueue(label: "imgque")
+        output?.setSampleBufferDelegate(delegate, queue: queue)
         output?.alwaysDiscardsLateVideoFrames = true
         captureSession?.addOutput(output!)
         captureSession?.addInput(captureDeviceInput)
